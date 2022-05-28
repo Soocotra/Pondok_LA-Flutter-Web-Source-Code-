@@ -204,7 +204,7 @@ class _HomeState extends State<Home> {
                       color: Color.fromARGB(255, 11, 100, 90),
                       fontSize: 25,
                       fontFamily: "Playfair"),
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),
