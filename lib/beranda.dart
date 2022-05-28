@@ -166,7 +166,7 @@ class _HomeState extends State<Home> {
                         "https://api.whatsapp.com/send/?phone=%2B6281280484342&text&app_absent=0");
                   },
                   child: AnimatedContainer(
-                      duration: Duration(milliseconds: 1000),
+                      duration: const Duration(milliseconds: 1000),
                       padding: EdgeInsets.symmetric(
                           horizontal: (MediaQuery.of(context).size.width >= 701)
                               ? 150
@@ -182,7 +182,7 @@ class _HomeState extends State<Home> {
                             TextStyle(color: Color.fromARGB(255, 11, 100, 90)),
                       ))),
             ),
-            Image(image: AssetImage("img/pool.jpeg")),
+            const Image(image: AssetImage("img/pool.jpeg")),
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Text(
@@ -212,7 +212,7 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.only(top: 60),
               alignment: Alignment.center,
               height: 150,
-              color: Color.fromARGB(255, 42, 74, 70),
+              color: const Color.fromARGB(255, 42, 74, 70),
               child: const Text(
                 "Testimoni",
                 style: TextStyle(
@@ -248,8 +248,8 @@ class _HomeState extends State<Home> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: 100,
-              color: Color.fromARGB(255, 42, 74, 70),
-              margin: EdgeInsets.only(bottom: 150),
+              color: const Color.fromARGB(255, 42, 74, 70),
+              margin: const EdgeInsets.only(bottom: 150),
             ),
             Footer()
           ],

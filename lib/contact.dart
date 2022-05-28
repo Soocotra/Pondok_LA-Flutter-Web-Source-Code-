@@ -44,7 +44,7 @@ class _ContactPageState extends State<ContactPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(bottom: 50),
+                    margin: const EdgeInsets.only(bottom: 50),
                     child: const Text(
                       "Lokasi",
                       style: TextStyle(
@@ -56,32 +56,32 @@ class _ContactPageState extends State<ContactPage> {
                   Stack(
                     children: [
                       Container(
-                        padding:
-                            EdgeInsets.only(left: 50, right: 50, bottom: 80),
+                        padding: const EdgeInsets.only(
+                            left: 50, right: 50, bottom: 80),
                         width: 700,
                         height: 400,
                         child: GoogleMap(
                           markers: {
-                            Marker(
-                              markerId: MarkerId('_villaLocation'),
-                              position: LatLng(
+                            const Marker(
+                              markerId: const MarkerId('_villaLocation'),
+                              position: const LatLng(
                                   -6.691687001023778, 106.88655570552207),
                               consumeTapEvents: true,
-                              infoWindow: InfoWindow(
+                              infoWindow: const InfoWindow(
                                 title: "Villa LA02",
                               ),
                             )
                           },
                           onMapCreated: _onMapCreated,
-                          initialCameraPosition: CameraPosition(
-                            target:
-                                LatLng(-6.691687001023778, 106.88655570552207),
+                          initialCameraPosition: const CameraPosition(
+                            target: const LatLng(
+                                -6.691687001023778, 106.88655570552207),
                             zoom: 16,
                           ),
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 60, top: 10),
+                        margin: const EdgeInsets.only(left: 60, top: 10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.white,
@@ -89,7 +89,7 @@ class _ContactPageState extends State<ContactPage> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 10, vertical: 2),
                         child: TextButton(
-                          child: Text(
+                          child: const Text(
                             "Open in Google Maps",
                             style: TextStyle(fontSize: 12),
                           ),
@@ -115,7 +115,7 @@ class _ContactPageState extends State<ContactPage> {
                         "https://api.whatsapp.com/send/?phone=%2B6281280484342&text&app_absent=0");
                   },
                   child: AnimatedContainer(
-                      duration: Duration(milliseconds: 1000),
+                      duration: const Duration(milliseconds: 1000),
                       padding: EdgeInsets.symmetric(
                           horizontal: (MediaQuery.of(context).size.width >= 701)
                               ? 180

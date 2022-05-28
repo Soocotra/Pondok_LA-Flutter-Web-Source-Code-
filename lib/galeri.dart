@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:villa_la02/appBar.dart';
 
 class Gallery extends StatelessWidget {
-  Gallery({Key? key}) : super(key: key);
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  const Gallery({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     List<String> galleryImage = [
@@ -22,16 +22,16 @@ class Gallery extends StatelessWidget {
       appBar: appBar(
           isActive: "galeri",
           context: context,
-          appBgColor: Color.fromARGB(255, 42, 74, 70),
-          fontColor: Color.fromARGB(255, 196, 210, 202)),
+          appBgColor: const Color.fromARGB(255, 42, 74, 70),
+          fontColor: const Color.fromARGB(255, 196, 210, 202)),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              padding:
-                  EdgeInsets.only(top: 30, bottom: 100, right: 50, left: 50),
+              padding: const EdgeInsets.only(
+                  top: 30, bottom: 100, right: 50, left: 50),
               width: MediaQuery.of(context).size.width,
-              color: Color.fromARGB(255, 42, 74, 70),
+              color: const Color.fromARGB(255, 42, 74, 70),
               child: const Text(
                 "Galeri",
                 textAlign: TextAlign.center,
@@ -43,7 +43,7 @@ class Gallery extends StatelessWidget {
             ),
             MediaQuery.of(context).size.width >= 1024
                 ? Container(
-                    margin: EdgeInsets.all(40),
+                    margin: const EdgeInsets.all(40),
                     width: MediaQuery.of(context).size.width / 1.1,
                     alignment: Alignment.center,
                     child: LargeGallery(galleryImage),
@@ -73,7 +73,7 @@ Column LargeGallery(dynamic galleryImage) {
                   image: AssetImage(galleryImage[0]),
                   height: 277,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Image(
@@ -83,7 +83,7 @@ Column LargeGallery(dynamic galleryImage) {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Expanded(
@@ -97,7 +97,7 @@ Column LargeGallery(dynamic galleryImage) {
           )
         ],
       ),
-      SizedBox(
+      const SizedBox(
         height: 20,
       ),
       Row(
@@ -113,7 +113,7 @@ Column LargeGallery(dynamic galleryImage) {
                   image: AssetImage(galleryImage[2]),
                   height: 277,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Image(
@@ -123,7 +123,7 @@ Column LargeGallery(dynamic galleryImage) {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Expanded(
@@ -144,34 +144,34 @@ Column LargeGallery(dynamic galleryImage) {
 
 Container MobileGallery(List<String> galleryImage, BuildContext context) {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 80, vertical: 50),
+    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 50),
     width: MediaQuery.of(context).size.width,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Image(image: AssetImage(galleryImage[0])),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Image(image: AssetImage(galleryImage[1])),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Image(image: AssetImage(galleryImage[2])),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Image(
           image: AssetImage(galleryImage[3]),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Image(
           image: AssetImage(galleryImage[4]),
           fit: BoxFit.fill,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Image(image: AssetImage(galleryImage[5]))
